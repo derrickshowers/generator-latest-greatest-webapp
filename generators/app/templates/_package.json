@@ -1,0 +1,18 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "rm -r ./dist/*",
+    "build:css": "node-sass -r ./app/scss -o dist/css",
+    "build:static": "cp app/*.html; mkdir dist/images; cp -r app/images/* dist/images/",
+    "build": "npm run clean; npm run build:css; npm run build:static; webpack",
+    "watch": "watch 'npm run build' ./app"
+  },
+  "dependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "node-sass": "*",
+    "watch": "*"
+  }
+}
