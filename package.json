@@ -1,0 +1,27 @@
+{
+  "name": "generator-latest-greatest-webapp",
+  "version": "0.0.1",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "derrickshowers/generator-latest-greatest-webapp",
+  "author": {
+    "name": "Derrick Showers",
+    "email": "derrick@derrickshowers.com",
+    "url": "https://github.com/derrickshowers"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
