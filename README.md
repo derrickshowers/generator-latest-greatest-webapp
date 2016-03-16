@@ -6,7 +6,7 @@ Ever wish you could just quickly setup a new webapp, but with all the goodies li
 
 ## Installing
 
-    npm install -g latest-greatest-webapp
+    npm install -g generator-latest-greatest-webapp
 
 Seriously, that's it.
 
