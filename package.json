@@ -1,7 +1,7 @@
 {
   "name": "generator-latest-greatest-webapp",
   "version": "0.0.2",
-  "description": "Ever wish you could just quickly setup a new webapp, but with all the goodies like ES2015, SCSS, and all the other fun stuff? Well, now it's as easy as installing this module and saying "YO BRO!" (without the bro...)",
+  "description": "Ever wish you could just quickly setup a new webapp, but with all the goodies like ES2015, SCSS, and all the other fun stuff? Well, now it's as easy as installing this module and saying \"YO BRO!\" (without the bro...)",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "derrickshowers/generator-latest-greatest-webapp",
