@@ -24,7 +24,8 @@ module.exports = {
    * More info: https://webpack.github.io/docs/configuration.html#output
    */
   output: {
-    path: path.join(__dirname, 'dist/'),
+    path: path.join(__dirname, 'dist/scripts/'),
+    publicPath: 'scripts/',
     filename: '[name].js',
 
     // libraryTarget: 'umd',    // creating a module? uncomment these?
@@ -73,7 +74,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        loader: ['babel'],
         exclude: /node_modules/,
         query: {
           presets: ['es2015']
