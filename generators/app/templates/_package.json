@@ -2,11 +2,13 @@
   "name": "<%= name %>",
   "version": "0.0.0",
   "scripts": {
-    "clean": "rm -r ./dist/*",
+    "clean": "rm -r ./dist/* || true",
     "build:css": "node-sass -r ./app/scss -o dist/css",
-    "build:static": "cp app/*.html; mkdir dist/images; cp -r app/images/* dist/images/",
-    "build": "npm run clean; npm run build:css; npm run build:static; webpack",
-    "watch": "watch 'npm run build' ./app"
+    "build:html": "cp app/*.html dist",
+    "build:images": "mkdir dist/images; cp -r app/images/* dist/images/ || true",
+    "build:static": "npm run build:css; npm run build:html; npm run build:images",
+    "build": "npm run clean; npm run build:static; webpack",
+    "dev": "npm run build && webpack-dev-server --content-base ./dist --inline & watch 'npm run build:static' ./app"
   },
   "dependencies": {
     "babel-core": "*",

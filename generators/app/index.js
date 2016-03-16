@@ -5,7 +5,7 @@ var yosay = require('yosay');
 var path = require('path');
 
 module.exports = yeoman.generators.Base.extend({
-  prompting: function () {
+  prompting: function() {
     var done = this.async();
 
     // Have Yeoman greet the user.
@@ -22,13 +22,13 @@ module.exports = yeoman.generators.Base.extend({
       },
       {
         type: 'confirm',
-        name: 'someOption',
-        message: 'Would you like to enable this option?',
+        name: 'includeHtmlCss',
+        message: 'Should HTML and CSS be included (choose Y, \'no\' doesn\'t work quite yet)?',
         default: true
       }
     ];
 
-    this.prompt(prompts, function (props) {
+    this.prompt(prompts, function(props) {
       this.props = props;
       // To access props later use this.props.someOption;
 
@@ -37,11 +37,16 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    projectStructure: function () {
+    projectStructure: function() {
       this.mkdir('app');
+      if (this.props.includeHtmlCss) {
+        this.mkdir('app/scripts');
+        this.mkdir('app/scss');
+        this.mkdir('app/images');
+      }
     },
 
-    projectfiles: function () {
+    projectfiles: function() {
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -64,10 +69,32 @@ module.exports = yeoman.generators.Base.extend({
           name: this.props.packageName
         }
       );
+    },
+
+    appFiles: function() {
+      var jsDestPath = (this.props.includeHtmlCss) ? 'app/scripts/main.js' : 'app/main.js';
+      this.fs.copy(
+        this.templatePath('_main.js'),
+        this.destinationPath(jsDestPath)
+      );
+      if (this.props.includeHtmlCss) {
+        this.mkdir('app/scss');
+        this.mkdir('app/images');
+        this.fs.copy(
+          this.templatePath('_app.scss'),
+          this.destinationPath('app/scss/app.scss')
+        );
+        this.fs.copyTpl(
+          this.templatePath('_index.html'),
+          this.destinationPath('app/index.html'), {
+            name: this.props.packageName
+          }
+        );
+      }
     }
   },
 
-  install: function () {
-    // this.npmInstall();
+  install: function() {
+    this.npmInstall();
   }
 });
