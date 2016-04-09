@@ -39,20 +39,18 @@ module.exports = {
    *
    * More info: https://webpack.github.io/docs/library-and-externals.html
    */
-  // externals: {
-  //   jquery: {
-  //     root: '$',
-  //     commonjs2: 'jquery',
-  //     commonjs: 'jquery',
-  //     amd: 'jquery'
-  //   },
-  //   underscore: {
-  //     root: '_',
-  //     commonjs2: 'underscore',
-  //     commonjs: 'underscore',
-  //     amd: 'underscore'
-  //   }
-  // },
+   externals: {
+     jquery: {
+       var: 'jQuery',
+       commonjs: 'jquery',
+       amd: 'jquery'
+     },
+     underscore: {
+       var: '_',
+       commonjs: 'underscore',
+       amd: 'underscore'
+     }
+   },
 
   /**
    * More info on modules: https://webpack.github.io/docs/configuration.html#module
