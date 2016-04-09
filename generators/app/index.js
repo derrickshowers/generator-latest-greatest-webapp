@@ -21,6 +21,11 @@ module.exports = yeoman.generators.Base.extend({
         default: process.cwd().split(path.sep).pop()
       },
       {
+        type: 'input',
+        name: 'authorName',
+        message: 'What\'s your name (author)?'
+      },
+      {
         type: 'confirm',
         name: 'includeHtmlCss',
         message: 'Should HTML and CSS be included (choose Y, \'no\' doesn\'t work quite yet)?',
@@ -66,7 +71,8 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'), {
-          name: this.props.packageName
+          name: this.props.packageName,
+          author: this.props.authorName
         }
       );
     },
@@ -87,7 +93,8 @@ module.exports = yeoman.generators.Base.extend({
         this.fs.copyTpl(
           this.templatePath('_index.html'),
           this.destinationPath('app/index.html'), {
-            name: this.props.packageName
+            name: this.props.packageName,
+            author: this.props.authorName
           }
         );
       }
