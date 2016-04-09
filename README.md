@@ -18,6 +18,8 @@ Seriously, that's it.
 
 ## Development
 
+Generator uses [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html) to serve everything at [localhost:8080](http://localhost:8080). Just run the following command to get started:
+
     npm run dev
 
 ## Build and deploy
@@ -25,6 +27,12 @@ Seriously, that's it.
     npm run build
 
 After things are done, just move whatever is in your `dist/` directory to your server.
+
+## FAQs
+
+**Why doesn't live reload seem to work?**
+
+Live reload does work, but only for JS changes. Webpack Dev Server doesn't watch static files (HTML, SCSS, etc.). Damn, what a bummer, but don't worry, there's still hope. The `npm run dev` command is setup to watch your markup and css changes, so everything still gets moved to the `dist/` directory (which is what is served with Webpack Dev Server), but you just have to manually refresh the page. Sorry, life is hard.
 
 ## License
 
