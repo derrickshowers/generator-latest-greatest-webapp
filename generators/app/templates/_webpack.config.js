@@ -26,7 +26,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist/scripts/'),
     publicPath: 'scripts/',
-    filename: '[name].js',
+    filename: '[name].js'
 
     // libraryTarget: 'umd',    // creating a module? uncomment these?
     // umdNamedDefine: true     // this guy, too!
