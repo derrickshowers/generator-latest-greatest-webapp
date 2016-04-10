@@ -12,7 +12,7 @@ engines:
     config:
       languages:
         javascript:
-          mass_threshold: 30
+          mass_threshold: 65
 ratings:
   paths:
   - generators/**
