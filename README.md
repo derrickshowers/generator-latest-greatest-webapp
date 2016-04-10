@@ -1,5 +1,7 @@
 # generator-latest-greatest-webapp
 
+[![Build Status](https://travis-ci.org/derrickshowers/generator-latest-greatest-webapp.svg?branch=master)](https://travis-ci.org/derrickshowers/generator-latest-greatest-webapp)
+
 ## What is it?
 
 Ever wish you could just quickly setup a new webapp, but with all the goodies like ES2015, SCSS, and all the other fun stuff? Well, now it's as easy as installing this module and saying "YO BRO!" (without the bro...)
