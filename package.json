@@ -11,7 +11,8 @@
     "url": "https://github.com/derrickshowers"
   },
   "scripts": {
-    "test": "jshint */*.js && mocha test/test-app.js"
+    "test": "jshint */*.js && mocha test/test-app.js",
+    "coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha test/test-app.js"
   },
   "files": [
     "generators"
@@ -25,7 +26,8 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "*",
-    "jshint": "*"
+    "istanbul": "^0.4.3",
+    "jshint": "*",
+    "mocha": "*"
   }
 }
