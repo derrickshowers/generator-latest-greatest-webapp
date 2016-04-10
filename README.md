@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/derrickshowers/generator-latest-greatest-webapp.svg?branch=master)](https://travis-ci.org/derrickshowers/generator-latest-greatest-webapp)
 [![Code Climate](https://codeclimate.com/github/derrickshowers/generator-latest-greatest-webapp/badges/gpa.svg)](https://codeclimate.com/github/derrickshowers/generator-latest-greatest-webapp)
+[![Test Coverage](https://codeclimate.com/github/derrickshowers/generator-latest-greatest-webapp/badges/coverage.svg)](https://codeclimate.com/github/derrickshowers/generator-latest-greatest-webapp/coverage)
 
 ## What is it?
 
