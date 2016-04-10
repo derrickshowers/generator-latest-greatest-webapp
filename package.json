@@ -10,6 +10,9 @@
     "email": "derrick@derrickshowers.com",
     "url": "https://github.com/derrickshowers"
   },
+  "scripts": {
+    "test": "jshint */*.js && mocha test/test-app.js"
+  },
   "files": [
     "generators"
   ],
@@ -22,6 +25,7 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "jshint": "*"
   }
 }
