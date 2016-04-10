@@ -16,14 +16,14 @@ describe('latest-greatest-webapp generator', function() {
       })
       .withPrompts({
         packageName: 'TPS Report Faker',
-        authorName: 'Milton',
+        authorName: 'Milton'
       });
   });
 
   describe('ES6 module', function() {
     beforeEach(function(done) {
       this.app.withPrompts({
-        includeHtmlCss: false,
+        includeHtmlCss: false
       }).on('end', done);
     });
 
@@ -41,7 +41,7 @@ describe('latest-greatest-webapp generator', function() {
   describe('ES6 web app', function() {
     beforeEach(function(done) {
       this.app.withPrompts({
-        includeHtmlCss: true,
+        includeHtmlCss: true
       }).on('end', done);
     });
 
