@@ -1,0 +1,6 @@
+engines:
+  duplication:
+    config:
+      languages:
+        javascript:
+          mass_threshold: 65
